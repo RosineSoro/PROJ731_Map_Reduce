@@ -1,0 +1,1 @@
+{orange=2, apple=4, kiwi=1, pamplemousse=1, papaye=1, mandarine=1, mangue=1, peach=2, goyave=1, clémentine=1}
