@@ -3,12 +3,12 @@
 # SORO GNIDANHAN ET KOALAGA LAURIANE
 
 L'objectif du projet est de reproduire le comportement d’Hadoop sur l’exemple de comptage de mots avec en entrée : un ensemble de fichiers texte contenant des mots et en sortie : un dictionnaire comportant l’ensemble des mots associés au compteur de leur nombre d’occurrences. 
-Dans une première phase, une tâche par fichier va compter le nombre d’occurrence des mots du fichier qu’elle a reçue (MAP), dans un deuxième temps un nombre fixé de tâche « reduce » vont récupérer chez chacunes des taches map le sous ensemble des mots dont elle est « responsable » et comptabiliser pour chacun des ces mots, le nombre total d’occurrences avec l'utilisation d'un nœud coordinateur pour lancer les taches map et reduce.
+Dans une première phase, une tâche par fichier va compter le nombre d’occurrence des mots du fichier qu’elle a reçue (MAP), dans un deuxième temps un nombre fixé de tâche « reduce » vont récupérer chez chacunes des taches map le sous ensemble des mots dont elle est « responsable » et comptabiliser pour chacun de ces mots, le nombre total d’occurrences avec l'utilisation d'un nœud coordinateur pour lancer les taches map et reduce.
 
 Nous avons fait un multithread centralisé avec le nombre de mapper et de reducer à ajuster en fonction du nombre qu'on veut sinon par défaut il y'a 3 mappers et 2 reducers.
 
 
-# Shuffle ( noeud coordianateur):
+# Shuffle ( noeud coordinateur):
 
 Le shuffle est celui qui se charge de la lecture du fichier et de sa répartition en sous-parties.
 Il attribue ensuite chaque sous-partie à un mapper puis lance les tâches MAP.
